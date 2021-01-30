@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from multiprocessing import Pool
 from sklearn.datasets._samples_generator import make_blobs
 from sklearn.cluster import KMeans
@@ -20,7 +22,7 @@ def main():
     t0 = time.time()
     with Pool(count) as p:
         p.map(do_kmeans, [100000,100000,100000,100000,100000,100000,100000,100000,100000,100000])
-        
+
     print(f"Performed {count} KMeans in total time: {time.time()-t0}")
 
 if __name__ == "__main__":

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from sklearn.datasets._samples_generator import make_blobs
 from sklearn.cluster import KMeans
 import time
